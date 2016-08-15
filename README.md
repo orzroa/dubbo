@@ -123,20 +123,20 @@ cd dubbo-*-SNAPSHOT/bin
 ./start.sh
 
 cd ~/dubbo/dubbo-demo/dubbo-demo-provider/target/dubbo-*-SNAPSHOT/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=dubbo://127.0.0.1:9090
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=dubbo/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 
 cd ~/dubbo/dubbo-demo/dubbo-demo-consumer/target/dubbo-*-SNAPSHOT/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=dubbo://127.0.0.1:9090
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=dubbo/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 
 cd ~/dubbo/dubbo-simple/dubbo-monitor-simple/target/dubbo-*-SNAPSHOT/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=dubbo://127.0.0.1:9090
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=dubbo/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 ```
@@ -155,20 +155,20 @@ cd ../bin
 ./zkServer.sh start
 
 cd ~/dubbo/dubbo-demo/dubbo-demo-provider/target/dubbo-*-SNAPSHOT/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=zookeeper://127.0.0.1:2181
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=zookeeper/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 
 cd ~/dubbo/dubbo-demo/dubbo-demo-consumer/target/dubbo-*-SNAPSHOT/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=zookeeper://127.0.0.1:2181
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=zookeeper/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 
 cd ~/dubbo/dubbo-simple/dubbo-monitor-simple/target/dubbo-*-SNAPSHOT/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=zookeeper://127.0.0.1:2181
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=zookeeper/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 ```
@@ -183,18 +183,18 @@ cd redis-2.4.8
 make
 nohup ./src/redis-server redis.conf &
 cd ~/dubbo/dubbo-demo-provider/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=redis://127.0.0.1:6379
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=redis/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 cd ~/dubbo/dubbo-demo-consumer/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=redis://127.0.0.1:6379
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=redis/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 cd ~/dubbo/dubbo-simple-monitor/conf
-vi dubbo.properties
-- edit: dubbo.registry.adddress=redis://127.0.0.1:6379
+mv dubbo.properties dubbo.properties.bak
+cat dubbo.properties.bak|sed 's/^dubbo.registry/#dubbo.registry/g'|sed 's/^#dubbo.registry.address=zookeeper/dubbo.registry.address=redis/g' > dubbo.properties
 cd ../bin
 ./restart.sh
 ```
