@@ -35,7 +35,7 @@ Refer to service:
 
 0. Install the git and maven command line:
 
-    ```sh
+```sh
 yum install git
 or: apt-get install git
 cd ~
@@ -48,7 +48,7 @@ source .bash_profile
 
 0. Checkout the dubbo source code:
 
-    ```sh
+```sh
 cd ~
 git clone https://github.com/alibaba/dubbo.git dubbo
 git checkout master
@@ -57,7 +57,7 @@ or: git checkout -b dubbo-2.*
 
 0. Import the dubbo source code to eclipse project:
 
-    ```sh
+```sh
 cd ~/dubbo
 mvn eclipse:eclipse
 ```
@@ -77,7 +77,7 @@ mvn eclipse:eclipse
 
 0. Build the dubbo binary package:
 
-    ```sh
+```sh
 cd ~/dubbo
 mvn clean install -Dmaven.test.skip
 cd dubbo/target
@@ -86,7 +86,7 @@ ls
 
 0. Install the demo provider:
 
-    ```sh
+```sh
 cd ~/dubbo/dubbo-demo/dubbo-demo-provider/target
 tar zxvf dubbo-demo-provider-2.*-assembly.tar.gz
 cd dubbo-*-SNAPSHOT/bin
@@ -95,7 +95,7 @@ cd dubbo-*-SNAPSHOT/bin
 
 0. Install the demo consumer:
 
-    ```sh
+```sh
 cd ~/dubbo/dubbo-demo/dubbo-demo-consumer/target
 tar zxvf dubbo-demo-consumer-2.*-assembly.tar.gz
 cd dubbo-*-SNAPSHOT/bin
@@ -106,7 +106,7 @@ tail -f stdout.log
 
 0. Install the simple monitor:
 
-    ```sh
+```sh
 cd ~/dubbo/dubbo-simple/dubbo-monitor-simple/target
 tar zxvf dubbo-monitor-simple-2.*-assembly.tar.gz
 cd dubbo-*-SNAPSHOT/bin
@@ -116,7 +116,7 @@ http://127.0.0.1:8080
 
 0. Install the simple registry:
 
-    ```sh
+```sh
 cd ~/dubbo/dubbo-simple/dubbo-registry-simple/target
 tar zxvf dubbo-registry-simple-2.*-assembly.tar.gz
 cd dubbo-*-SNAPSHOT/bin
@@ -143,7 +143,7 @@ cd ../bin
 
 0. Install the zookeeper registry:
 
-    ```sh
+```sh
 cd ~
 wget http://www.apache.org/dist//zookeeper/zookeeper-3.3.3/zookeeper-3.3.3.tar.gz
 tar zxvf zookeeper-3.3.3.tar.gz
@@ -175,7 +175,7 @@ cd ../bin
 
 0. Install the redis registry:
 
-    ```sh
+```sh
 cd ~
 wget http://redis.googlecode.com/files/redis-2.4.8.tar.gz
 tar xzf redis-2.4.8.tar.gz
@@ -201,7 +201,7 @@ cd ../bin
 
 0. Install the admin console:
 
-    ```sh
+```sh
     cd ~/dubbo/dubbo-admin
     mvn jetty:run -Ddubbo.registry.address=zookeeper://127.0.0.1:2181
     http://root:root@localhost:8080/governance/services
