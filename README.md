@@ -145,12 +145,12 @@ cd ../bin
 
 ```sh
 cd ~
-wget http://www.apache.org/dist//zookeeper/zookeeper-3.3.3/zookeeper-3.3.3.tar.gz
-tar zxvf zookeeper-3.3.3.tar.gz
-cd zookeeper-3.3.3/conf
+wget https://mirrors.tuna.tsinghua.edu.cn/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
+tar zxvf zookeeper-*.tar.gz
+cd zookeeper-*/conf
 cp zoo_sample.cfg zoo.cfg
-vi zoo.cfg
-- edit: dataDir=/home/xxx/data
+#vi zoo.cfg
+#- edit: dataDir=/home/xxx/data
 cd ../bin
 ./zkServer.sh start
 
