@@ -204,6 +204,6 @@ cd ../bin
 ```sh
 cd ~/dubbo/dubbo-admin
 mvn jetty:run -Ddubbo.registry.address=zookeeper://127.0.0.1:2181
-[dubbo-admin](http://root:root@dubbo:8081/governance/services)
 ```
+visit [dubbo-admin](http://root:root@dubbo:8081/governance/services)
 
