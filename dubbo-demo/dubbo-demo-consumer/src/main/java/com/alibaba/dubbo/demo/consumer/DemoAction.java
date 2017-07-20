@@ -19,9 +19,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import com.alibaba.dubbo.demo.DemoService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class DemoAction {
-    
+
+    @Autowired
     private DemoService demoService;
 
     public void setDemoService(DemoService demoService) {
